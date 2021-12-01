@@ -1098,7 +1098,7 @@ video {
     text-decoration: underline;
 }
 .room-details .room-book{
-    padding:115px 30px 10px 30px
+    padding:30px 30px 10px 30px
 }
 .room-details .room-book-form{
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -1141,6 +1141,93 @@ video {
 .room-details .safety-print i{
     font-size: 7em;
     padding-bottom: 40px;
+}
+
+.room-details .editable-zone{
+    padding:20px;
+    background-color: var(--bg-color-25-opacity);
+    color:var(--bg-color);
+    border-radius: 0;
+    border:2px solid transparent;
+}
+.room-details .editable-zone:hover{
+    border:2px solid var(--bg-color);
+}
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+.room-details .sidebar-text-image{
+    position: relative;
+    overflow: hidden;
+    max-height: 550px;
+}
+.room-details .sidebar-text-image img{
+    width:100%
+}
+
+.room-details .sidebar-text-image .text{
+    background-color: var(--bg-color-25-opacity);
+    position: absolute;
+    bottom: -200px;
+    transition: 300ms all;
+    color:var(--text-light-color);
+    width:100%;
+    padding:20px
+}
+
+.room-details .sidebar-text-image:hover .text{
+    position: absolute;
+    bottom: 0;
+    transition: 300ms all;
+}
+.room-details .sidebar-text-image .image-2{
+    position: absolute;
+    top: 0;
+    opacity:0;
+    transition: 500ms all;
+}
+.room-details .sidebar-text-image .image-1{
+    position: relative;
+    top: 0;
+    opacity:1;
+    transition: 500ms all;
+}
+.room-details .sidebar-text-image:hover .image-1{
+    opacity:0;
+    transition: 500ms all;
+}
+.room-details .sidebar-text-image:hover .image-2{
+    opacity:1 ;
+    transition: 500ms all;
+    top:0;
+    left:0
+}
+
+.room-details .table-details table{
+    width:100%;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.room-details .table-details table .property,.room-details .table-details table .value {
+    box-shadow: 1px 1px 7px 0px #eee;
+    padding:5px 10px
+}
+.room-details .table-details table th:nth-child(1){
+    width:75%
+}
+.room-details .table-details table .red{
+    color:#FF6A67
+}
+.room-details .table-details table .green{
+    color:#00b894
+}
+.room-details .table-details table .green:hover{
+    background-color: rgba(0, 184, 148,0.25);
+}
+.room-details .table-details table .red:hover{
+    background-color:rgba(255, 106, 103, 0.25)
 }
 @media screen and (max-width: 992px){
     .room-details .amenities .individual-amenities{

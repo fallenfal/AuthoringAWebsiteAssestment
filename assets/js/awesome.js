@@ -14,5 +14,14 @@ const burgerMenu = () => {
         burger.classList.toggle("burger-closed")
     })
 }
+const printPage = () => {
+    const printButton = document.querySelector(".print-button")
+    printButton.addEventListener("click",()=>{
+        console.log("before window print")
+        window.print()
+        console.log("after window print")
+    })
+}
 
 burgerMenu()
+printPage()
